@@ -79,7 +79,7 @@ func LaunchGame(db *sqlx.DB) gin.HandlerFunc{
 	
 		c.JSON(200, gin.H{
 			"response_type": "in_channel",
-			"text": fmt.Sprintf("https://www.codingame.com/clashofcode/clash/%v", response.PublicHandle),
+			"text": fmt.Sprintf("https://www.codingame.com/clashofcode/clash/%v %v", response.PublicHandle, requestBody.Text),
 		})
 		
 	}
