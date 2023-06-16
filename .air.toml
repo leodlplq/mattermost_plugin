@@ -1,0 +1,28 @@
+# .air.toml
+
+# Entry point of your Go application
+root = "."
+
+[build]
+# Set your main package file
+# For example, if your main package is in `cmd/main.go`, set it as follows:
+main = "main.go"
+
+# Exclude directories or files from monitoring
+exclude_dir = ["assets", "tmp", "vendor"]
+
+# Define any custom build options if needed
+# For example, to build with debug information:
+# cmd = "go build -tags debug"
+
+[log]
+# Set the log level ('debug', 'info', 'warn', 'error', 'fatal', or 'panic')
+level = "info"
+
+# Define any custom log format if needed
+# format = "time={{.Time}} level={{.Level}} msg={{.Message}}"
+
+[web]
+# Set the address and port on which `air` will listen
+address = "127.0.0.1"
+port = 8080
